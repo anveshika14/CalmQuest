@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins';
+}
+
+body{
+display:flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+ background-image: url('/static/images/creg1.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.cover_box{
+    position: relative;
+    width: 700px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid #c9c8c8;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+    /*transform: scale(0);*/
+    overflow: hidden;
+    transition: transform .5s ease, height .2s ease border-color 0.5s ease;
+    
+    }
+    
+    .cover_box:hover{
+     border-color: #fff;
+     animation: border-glow 1s infinite alternate;
+    }
+    @keyframes border-glow{
+    from{
+        border-color: #f6f8f6;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    to{
+        border-color: #ffffff;
+        box-shadow: 0 0 20px rgba(255,255,255,1);
+    }
+    }
+    .cover_box.active-popup{
+    transform: scale(1);
+    }
+    .cover_box.active{
+    height: 520px;
+    }
+    .cover_box .form-box{
+        width: 100%;
+        padding: 40px;
+        }
+        .cover_box .form-box.login{
+        transition: transform .50s ease;
+        transform: translateX(0);
+        }
+        .cover_box.active .form-box.login{
+        transition: none;
+        transform: translateX(-400px);
+        }
+        .cover_box .form-box.register{
+        position: absolute;
+        transition: none;
+        transform: translateX(400px);
+        
+        }
+        .cover_box.active .form-box.register{
+        transition: transform .50s ease;
+        transform: translateX();
+        }
+        .cover_box .icon-close{
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        width: 45px;
+        height: 45px;
+        background: white;
+        font-size: 2em;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        z-index: 1;
+        margin-top: -20%;
+        }
+        .cover_box .icon-home{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 45px;
+        height: 45px;
+        background: white;
+        font-size: 2em;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        z-index: 1;
+        margin-top: -20%;
+        }
+        .form-box h2{
+        font-size: 2em;
+        color: black;
+        text-align: center;
+        margin-top: -3%;
+        }
+        .input-box{
+            position: relative;
+            width: 50%;
+            height: 50px;
+            margin: 25px 0;
+            }
+            .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color:black;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+            }
+            .input-box input:focus~label,
+            .input-box input:valid~label{
+            top: -10px;
+            }
+            .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 10px;
+            font-size: 1em;
+            color: #05190A;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+            }
+            .input-box .icon{
+            position: absolute;
+            right: 8px;
+            font-size: 1.8em;
+            color: #05190A;
+            line-height: 57px;
+            }
+            .remember-forgot{
+            font-size: .9em;
+            color: #05190A;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            }
+            .remember-forgot label input{
+            accent-color: #05190A;
+            margin-right: 3px;
+            }
+            .remember-forgot a{
+            color:#05190A;
+            text-decoration: underline;
+            }
+            .btn{
+            width: 100%;
+            height: 45px;
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            outline: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+            }
+            .login-register{
+            font-size: .9em;
+            color: black;
+            text-align: 500;
+            font-weight: 500;
+            margin: 25px 0 10px;
+            }
+            .login-register p a {
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            }
+            .login-register p a:hover{
+            text-decoration: underline;
+            }
+            

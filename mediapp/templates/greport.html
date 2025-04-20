@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/aboutus.css'%}" rel="stylesheet">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report</title>
+
+<style>
+  
+    .underline {
+        text-decoration: underline lightcoral;
+    }
+
+    .row{
+        margin-top: 30px;
+       
+        border: transparent;
+        width: 100%;
+        height: 350px;
+        margin-left: 0.5%;
+    }
+    .col-sm-4{
+        height: 300px;
+       
+        width: 20%;
+        margin-left: 10%;
+        margin-top: 2%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-sl {
+      height: 300px;
+      width: 100%;
+    }
+
+    .card {
+        height: 300px;
+        transition: transform .2s;
+        
+    }
+
+    .card img {
+        max-width: 100%;
+        height: 250px;
+        border-radius: 8px 8px 0px 0;
+    }
+    .card:hover{
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+   a{
+    text-decoration: none;
+    color: black;
+   }
+    
+
+    
+
+
+   
+</style>
+</head>
+<body>
+    <div>
+        <nav class="navbar  navbar-light " id="nav">
+            <div class="container-fluid" style="background:transparent">
+                <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg'%}" id="logo"></a>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'mediapp:index'%}">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:aboutus'%}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:services'%}">Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:new1'%}">Wellness Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:contactus'%}">Contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:login' %}" id="login">Login</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<!----------body-------------------->
+
+<h1 class="underline" style="text-align:center;margin-top: 2%;">Free Mental Health Assessments</h1>
+<p style="text-align: center;">join our community and get access to exclusive content on mental wellness.<br>
+    Take a Free test and get Your Report.</p>
+    <div class="con" style="margin-top:50px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card-sl">
+                <div class="card">
+                    <img src="{% static 'images/ww.jpeg'%}" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <b><a href="{% url 'mediapp:anx' %}">Anxiety</a></b> 
+                      
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card-sl">
+                <div class="card">
+                    <img src="{% static 'images/ww1.jpeg'%}" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <b><a href="{% url 'mediapp:dep'%}">Depression</a></b> 
+                      
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card-sl">
+                <div class="card">
+                    <img src="{% static 'images/ww2.jpeg'%}" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <b><a href="{% url 'mediapp:adhorder'%}">Attention defiict hyperactivity disorder</a></b> 
+                      
+                    </div>
+                  </div>
+            </div>
+          </div>
+           </div>
+           <div class="row">
+            <div class="col-sm-4">
+              <div class="card-sl">
+                  <div class="card">
+                      <img src="{% static 'images/ww3.jpeg'%}" alt="Avatar" style="width:100%">
+                      <div class="container">
+                      <b><a href="#">Loneliness</a></b> 
+                        
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-sl">
+                  <div class="card">
+                      <img src="{% static 'images/ww4.jpeg'%}" alt="Avatar" style="width:100%">
+                      <div class="container">
+                      <b><a href="#">Relationship</a></b> 
+                        
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-sl">
+                  <div class="card">
+                      <img src="{% static 'images/ww5.jpeg'%}" alt="Avatar" style="width:100%">
+                      <div class="container">
+                      <b><a href="#">Psychologyical Distress</a></b> 
+                        
+                      </div>
+                    </div>
+              </div>
+            </div>
+             </div>
+
+            
+
+<!----------------footer---------------->
+    <div class="footer" style="margin-top: 2%;">
+        <div class="abc1">
+            <p style="font-size: 30px; font-family:'Bebas Neue', cursive;letter-spacing: 1px;">CALMQUEST</p>
+            <p style="font-size: 17px;margin-top: -20px;color:rgb(218, 131, 131)">Your Mental Ally</p>
+    
+            <ul class="Contact">
+                <li><i class="fa fa-home"></i> &nbsp;&nbsp; Goel Institute Of Technology and Management,<br>
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Lucknow,Uttar pradesh,226017</li>
+    
+                <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+91-7292729389 , 9820482939</li>
+                <li><i class="fa fa-envelope"></i>
+                    &nbsp;&nbsp;info@calmquest.com</li>
+                <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
+            </ul>
+        </div>
+        <div class="abc2">
+            <!-- <input type="text" class="email" placeholder="Enter Your E-mail"> -->
+            <span style="font-size: 25px;margin-top: -70px;margin-left: 60px;">Quick Links</span>
+            <ul class="menu">
+                <li><a href="{% url 'mediapp:index'%}">Home</a></li>
+    
+                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'mediapp:aboutus'}">About Us</a></li>
+                <li><a href="{% url 'mediapp:new1'%}">Wellness Hub</a></li>
+                <li><a href="{% url 'mediapp:contactus'%}">Contact </a></li>
+            </ul>
+            <!--  -->
+        </div>
+        <div class="abc3"><span style="font-size: 25px;margin-top: -80px;margin-left: 60px;">Newsletter</span>
+            <input type="text" class="email" Placeholder="Enter Your Email"
+                style="width:100%;border-radius: 50px;border:2px solid white;">
+            <button class="button-71" role="button">
+                <p style="margin-top:-10px">Subscribe</p>
+            </button>
+        </div>
+    
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    
+    
+    </div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="position:relative;margin-top: -80px;">
+<defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+<script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.quote', { distance: '50px', origin: 'left',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.navbar  ', { distance: '50px', origin: 'top',delay:200, duration: 1000 }); 
+    ScrollReveal().reveal('.disorders  p', { distance: '50px', origin: 'top', duration: 1000 }); 
+    ScrollReveal().reveal('.articles  ', { distance: '50px', origin: 'left',delay:500 ,duration: 2000 }); 
+    ScrollReveal().reveal('.AIdetail h3,.button ', { distance: '50px', origin: 'right',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.test  ', { distance: '50px', origin: 'bottom',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.testimonials  ', { distance: '50px', origin: 'top',delay:400 ,duration: 3000 }); 
+    // ScrollReveal().reveal('.footer', { distance: '50px', origin: 'bottom',delay:600, duration: 1000 }); 
+    ScrollReveal().reveal('.abcd', { distance: '50px', origin: 'left', duration: 1000 }); 
+    
+    
+  </script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: false,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+    </body>
+    </html>

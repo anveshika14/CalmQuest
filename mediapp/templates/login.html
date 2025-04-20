@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+<title>Log In </title>
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+
+</head>
+<body>
+  
+  <div class="cover_box">
+   
+    <div class="form-box login">
+      <a href="{% url 'mediapp:index'%}"><ion-icon name="home-outline" style="font-size: 25px;color: black;margin-left: 2px;"></ion-icon></a>
+       <span style="font-size: 24px;margin-left: 90px;">Login</span>
+       <form action="#" method="post">
+          {% csrf_token%}
+      <div class="input-box">
+        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+        <input type="email" name="userid" required>
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+        <input type="password" name="logpass" required>
+        <label>Password</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember me</label>
+        <a href="#">Forgot password</a>
+      </div>
+      <button type="submit" class="btn" >Login</button>
+      <div class="login-register">
+        <p>Don't have an account?<a href="{% url 'mediapp:register'%}" class="register-link">Register</a></p>
+      </div>
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-success-dimissible d=fade show" role="alert">
+           <P style="text-align: center;color: black">{{message}}</P>
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+     {% endif %}
+    </div>
+  </div>
+   
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>

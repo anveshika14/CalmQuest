@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+  <title> ClamQuest| Book Your Session</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static '/assets/css/style1.css'%}">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check"/>
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <img src="{% static 'images/logo.jpg'%}"/>
+    </label>
+    <ul>
+      <li><a href="#">How its works</a></li>
+      <li><a href="#">Plans & pricing</a></li>
+      <li><a href="#" style="color: rgb(230, 154, 154)">Our Counselors</a></li>
+      <li><a href="#">Wellness Hub</a></li>
+      <li><a href="#">Corporates</a></li>
+      <li><a href="{% url 'clientapp:clienthome'%}"><button type="submit" class="btn" style="font-size: 18px;margin-top: -2%;border-radius: 50px;height: 50px;width: 160px; background-color:rgb(230, 154, 154);color: white;">My Dashboard</button></a></li>
+    </ul>
+  </nav>
+  
+  <div class="container" style="margin-top:5%;">
+    <div class="row">
+        <div class="col-sm-4" >
+            <div class="p-3 mb-2 text-black">
+              <div class="card" style="width:300px; margin-left:3%; height:500px;">
+                <img src="{% static 'images/user.jpg'%}"/>
+                <h2 style="margin-left:37%;">Malvika</h2> 
+                <h2 style="margin-left:37%;">Agarwal</h2>
+
+                <p style="margin-left:37%;">MA in Clinical </p>
+                <p style="margin-left:37%;">Psychology</p>
+                
+                  <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <h1><i class="bi bi-camera-video-fill" style="margin-left:70%; color:blue;"></i></h1>
+            </div>
+            <div class="col-md-4">
+              <h1><i class="bi bi-mic" style="margin-left:30%; color:orange; height:80px; width:30px;"></i></h1>
+            </div>
+            <div class="col-md-4">
+              <h1><i class="bi bi-chat-left-fill" style="color:blue;" ></i><h1>
+            </div>
+          </div>
+        
+              </div>
+            </div>
+        </div>
+      </div>
+        <div class="col-sm-4">
+            <div class="p-3 mb-2  text-black">
+              <h1 style="margin-left:4%;"><i class="bi bi-camera-video-fill" style="margin-left:1%; color:blue;"></i> Qualification</h1>
+            <p style="font-size:19px; margin-left:14%;"> MA In Clinical Psychology</p>
+            <h1 style="margin-left:4%;"><i class="bi bi-camera-video-fill" style="margin-left:1%; color:blue;"></i>Specializationh1</h1>
+            <p style="margin-left:13%; font-size:18px;"> Anxiety, Depression, Stress, Mood Disorder, Relationship Issues, Couple Counseling, Suicidal Ideation, Grief & Loss, Sleep Issues, Trauma, Narcissistic Abuse, Family Therapy, Self-Harm, Self Confidence, Anger, Eating Disorders, Marital Discord</p>
+          <h1 style="margin-left:4%;"><i class="bi bi-camera-video-fill" style="margin-left:1%; color:blue;"></i>Next Available at</h1>
+            <p style="font-size:19px; margin-left:14%;">May 22, 2024 10:00 AM</p>
+          
+          </div>
+        </div>
+        <div class="col-sm-4">
+            
+              <div class="p-3 mb-2  text-black">
+                <h1 style="margin-left:4%;"><i class="bi bi-camera-video-fill" style="margin-left:1%; color:blue;"></i>Languages Spoken</h1>
+                <p style="font-size:19px; margin-left:14%;">Hindi,English</p>
+                  <h1 style="margin-left:4%;"><i class="bi bi-camera-video-fill" style="margin-left:1%; color:blue;"></i>Therapeutic Expertise</h1>
+            <p style="font-size:19px; margin-left:14%;">Cognitive Behavioural Therapy (CBT), Mindfulness Based Therapies, Client Centred</p>
+              </div>
+
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-4">
+                <div class="p-3 mb-2  text-white">
+                  <button type="button" class="btn btn-primary" style="margin-left:27%;"><h3>Book Session</h3></button>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="p-3 mb-2  text-black">
+                  <h2 style="font-size:27px;">About </h2>
+                  <p>Malvika is an experienced Gottman Level 3 certified Counseling Psychologist specializing in working with couples, families, and young adults. With her belief that “Everyone is capable of and deserves compassion”, she is dedicated to fostering a safe environment and working with each individual to improve their quality of life. Her couples therapy focuses on learning to manage emotions and conflict, developing new skills for enhancing friendship, and helping the couple to create a system of shared meaning together. She aims at creating “Master Couples” who invest in and reap the benefits of a happy meaningful relationship. Malvika uses research-based strategies and tools developed by John & Julie Gottman to help couples successfully manage conflict. She empowers partners to have a dialogue about their worst gridlocked issues by uncovering their underlying expectations, hopes, dreams, history, and values which helps couples process fights, heal their hurts, deepen their intimacy and minimize relapses. She is also a certified Yoga and Meditation expert, a skill she often employs in her therapy to increase mindfulness, and minimize sleep and other mental health disorders.
+              
+                  </p>
+                </div>
+            </div>
+            
+</div>
+</body>
+</html>

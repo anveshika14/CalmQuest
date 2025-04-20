@@ -1,0 +1,38 @@
+{% extends "counselorparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;color:black">Upload Your Details</h1>
+            <form action="{% url 'counselorapp:uploaddetails' %}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                {% csrf_token %}   
+               <table class="table text-dark" style="border: 2px solid black;width: 50%;margin: auto;">
+               
+                <tr>
+                    <td>Upload Photo</td>
+                    <td> <input type="file"  name="myfile"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" style="height: 25px;"></td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td><input type="text" name="edu" style="height: 25px;"></td>
+                </tr>
+                <tr>
+                    <td>Specialization</td>
+                    <td><input type="text" name="spec" style="height: 25px;"></td>
+                </tr>
+                <tr>
+                    <td>Next Available At</td>
+                    <td><input type="date" name="date" style="height: 25px;">
+                        <input type="time" name="time"/></td>
+                </tr>
+                <td colspan="2" style="text-align: center;">
+                     <button type="submit" class="btn btn-warning" style="width: 50%;">Upload</button>
+                    </td>
+            </table>
+            </form>
+        </div>
+    </div>
+{% endblock body %}

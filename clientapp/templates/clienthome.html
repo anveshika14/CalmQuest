@@ -1,0 +1,72 @@
+{% extends "clientparent.html" %}
+{% load static %}
+{% block body %}
+  
+            <h2 style="color:rgba(5, 5, 5, 0.902);margin-left: 2%;font-weight: bold;">Welcome to CalmQuest, {{reg.logname}}</h2>   
+            <p style="color:black;margin: 20px;font-size: 17px;">"There is no shame in seeking help for your mental health."</p>
+            <div class="grid">
+                <div class="col-col-6" style="width: 40%;float:left;margin-top: 30px;"> 
+                <img src="{% static 'images\dlogo.jpg'%}" style="margin-left: 80px;height: 180px;"/>
+                </div>
+                <div class="col-col-6" style="width: 60%;float:right;margin-top: 30px;">
+                 <div class="box"  style="border: 1px solid rgba(31, 30, 30, 0.661);height: 60px;width: 70%;margin-top: 2%;background-color:#28666e;padding:20px;margin-left: 20%;margin-bottom: 5%;border-radius: 10px;box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.752) ;">
+                <h2 style="color: white;font-size: 15px;">You have 0 upcoming sessions.</h2>
+                </div>
+                </div>
+             </div>
+             <div class="box" style="margin-top: 22%;border: 1px solid transparent;">
+            <a href="#" style="text-decoration: none;"><h2 style="margin-left: 25px;margin-top: 3%;">Need Help ?</h2></a>
+            <button type="button" class="btn btn-warning" style="margin-left: 22px;height: 40px;width: 250px;background-color: orange;border-radius: 30px;margin-top: 1%;">Talk to a matching expert</button>
+        </div>
+<h3 style="color:black;margin-top: 5%;margin-left: 1%;">My Counselor</h3>
+<div class="container px-4" style="margin-left: -1%">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3 " style="width: 45%;border-radius: 10px;color:black;text-align: center;font-weight: bold;box-shadow: 5px 5px 10px black inset;">No Active Counselor
+      <br/><button type="button" class="btn btn-outline-warning" style="margin-top: 4%;border-radius: 20px;width: 200px;height: 45px;border: 5px solid orange">Book Now</button>
+    </div>
+    </div>
+    </div>
+</div>
+          <h2 style="color: black;margin-top: 5%;margin-left: 1%;">Explore Your Doubt</h2>
+          <hr style="height: 3px;width: 27%;color:orangered;margin-left: 1%;"/>
+        <div class="container overflow-hidden" style="margin-top: 2%;">
+            <div class="row gy-5">
+              <div class="col-6">
+                <div class="p-3" style="border-radius: 8px;color: black;font-weight: bold;box-shadow: 5px 5px 12px black inset;">
+                <p>Do you have follow up questions after your session? Don't worry, chat with your Therapist.</p>
+                <a href="#">
+                <button type="button" class="btn btn-warning" style="height: 40px;width: 200px;background-color: orange;border-radius: 30px;margin-left: 30%;box-shadow: 3px 3px 5px black">Start Chatting</button>
+                </a>
+              </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3" style="border-radius: 8px;color: black;font-weight: bold;box-shadow: 5px 5px 12px black inset;">
+                  <p>Feeling Overwhelmed? Talk to our Therapists. they are here to help you.</p>
+               <a href="{% url 'clientapp:session1'%}">
+                  <button type="button" class="btn btn-warning" style="height: 40px;width: 200px;background-color: orange;border-radius: 30px;margin-left: 30%;box-shadow: 3px 3px 5px black">Schedule a Session</button>
+                </a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3" style="border-radius: 8px;color: black;font-weight: bold;box-shadow: 5px 5px 12px black inset;">
+                <p>YOur Creative Release-Capture Your thoughts,&let your emotions go free.</p>
+               <a href="#">
+                <button type="button" class="btn btn-warning" style="height: 40px;width: 200px;background-color: orange;border-radius: 30px;margin-left: 30%;box-shadow: 3px 3px 5px black">Visit Mood Journal</button>
+                </a>
+              </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3" style="border-radius: 8px;color: black;font-weight: bold;box-shadow: 5px 5px 12px black inset;">
+                  <p>Something on your mind ask questions,comment or share anonymously.</p>
+               <a href="#">
+                  <button type="button" class="btn btn-warning" style="height: 40px;width: 200px;background-color: orange;border-radius: 30px;margin-left: 30%;box-shadow: 3px 3px 5px black">Start a Discussion</button>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+   
+    
+{% endblock body %}

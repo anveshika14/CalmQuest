@@ -1,0 +1,49 @@
+
+{% extends "counselorparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;color:black">Counselor Profile</h1>   
+            <table class="table text-dark" style="border: 2px solid black;width: 60%;margin: auto;">
+             <tr>
+                <td>Username</td>
+                <td>{{creg.username}}</td>
+             </tr>
+             <tr>
+                <td>Phone Number</td>
+                <td>{{creg.phoneno}}</td>
+             </tr>
+             <tr>
+                <td>Address</td>
+                <td>{{creg.address}}</td>
+             </tr>
+             <tr>
+                <td>Email</td>
+                <td>{{creg.email}}</td>
+             </tr>
+             <tr>
+                <td>Higher Education</td>
+                <td>{{creg.highedu}}</td>
+             </tr>
+             <tr>
+                <td>Specialization</td>
+                <td>{{creg.special}}</td>
+             </tr>
+             <tr>
+                <td>Work Experience</td>
+                <td>{{creg.work}}</td>
+             </tr>
+             <tr>
+                <td>Previous Organization</td>
+                <td>{{creg.preorg}}</td>
+             </tr>
+             <tr>
+                <td>Register Date</td>
+                <td>{{creg.regdate}}</td>
+             </tr>
+             
+              </table>
+  
+        </div>
+    </div>
+{% endblock body %}

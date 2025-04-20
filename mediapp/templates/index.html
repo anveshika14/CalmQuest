@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calmQuest</title>
+</head>
+
+<body >
+  
+  <div class="image" >
+    <nav class="navbar  navbar-light " id="nav">
+      <div class="container-fluid" style="background:transparent">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg'%}" id="logo"></a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mediapp:aboutus'%}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mediapp:services'%}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mediapp:new1'%}">Wellness Hub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mediapp:contactus'%}">Contact us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mediapp:login' %}" id="login">Login</a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="quote">
+      <h3>Connect.<span style="color:rgba(69, 153, 153, 0.925)">Mend</span>.Reconcile</h3>
+      <h6> Elevate Your Well-being with Expert Online Counseling.
+        <br><br>
+        Your Journey to Wellness Begins Here.
+      </h6><br>
+     <a href="{% url 'mediapp:register'%}"> <input type="button" class="start" value="START NOW" /></a>
+    </div>
+  </div>
+  <div>
+  </div>
+  <div class="disorders">
+    "Embrace the diversity of the mind"
+    <p> Learning about various mental disorders is a journey of empathy, breaking down stigma, and fostering a world
+      where understanding and support prevail.</p><br>
+  </div>
+  <div class="hero_area">
+    <!-- <p>Embrace Relief, Not Strain.</p> -->
+    <section class="articles">
+      <article>
+        <div class="article-wrapper">
+          <figure>
+            <img src="{% static 'images/anxiety.jpg'%}" alt="background-photo" />
+          </figure>
+          <div class="article-body">
+            <h2>Anxiety</h2>
+            <p>
+              A mental health condition characterized by excessive worry, fear, or nervousness.
+            </p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+
+        <div class="article-wrapper">
+          <figure>
+            <img src="{% static 'images/depress1.jpg'%}" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Depression</h2>
+            <p>
+              A mental health disorder causing persistent sadness, loss of interest, and impact on daily life. </p>
+            <a href="{% url 'mediapp:depress'%}" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+
+        <div class="article-wrapper">
+          <figure>
+            <img src="{% static 'images/self.jpg'%}" alt=""/>
+          </figure>
+          <div class="article-body">
+            <h2>Psychosis</h2>
+            <p>
+              A mental health condition involving a disconnect from reality, often marked by hallucinations and
+              delusions.</p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+  <div class="AIdetail">
+    <h3>AI Powered Counselling System<br><span style="color:rgb(218, 131, 131);margin-right:250px">. . .</span>
+    </h3>
+    <p>Elevate your journey of well being with AI.<br>AI Counseling for Your Journey to Wellness and for a Brighter
+      Tomorrow. <br> Your Compassionate Companion in Navigating Life's Challenges, Anytime, Anywhere.</p>
+   <a href="{% url 'mediapp:register'%}"> <input type="button" class="button" value="Join Us Now"></a>
+  </div>
+  <div class="test">
+    <h3><b>Discover Your Mental Health Status.</b></h3> Take Our Free Test for Quick Insights.
+    <br>Scientifically Validated Assessments to Uncover Possible Mental Health Symptoms.<br><br>
+    <a href="{% url 'mediapp:anx'%}"><input type="button" class="button1" value="Take Free test"></a>
+  </div>
+  <!-- <div class="mailing"> Need to know more about calmQuest? Read about us. 
+    <input type="button" class="read" value="Know More">
+  </div> -->
+  <div class="testimonials">
+    <h1>"Our Testimonials"
+    </h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <p>Anveshika Shukla</p>
+          <span>Student</span><br>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <h6>
+            I was unsure about starting therapy when I reached out to Felicity. Their personalized therapy plans, 24/7
+            support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to
+            manage my anxiety so well. My panic attacks are a thing of distant past now.</h6>
+        </div>
+        <div class="swiper-slide">
+          <p>Komal Chaurasiya</p>
+          <span>Student</span><br>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <h6>
+            I was unsure about starting therapy when I reached out to Felicity. Their personalized therapy plans, 24/7
+            support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to
+            manage my anxiety so well. My panic attacks are a thing of distant past now. I was unsure about starting
+            therapy when I reached out to Felicity.</h6>
+        </div>
+        <div class="swiper-slide">
+          <p>Anveshika Shukla</p>
+          <span>Student</span><br>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <h6>
+            I was unsure about starting therapy when I reached out to Felicity. Their personalized therapy plans, 24/7
+            support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to
+            manage my anxiety so well. My panic attacks are a thing of distant past now.</h6>
+        </div>
+        <div class="swiper-slide">
+          <p>Komal Chaurasiya</p>
+          <span>Student</span><br>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <h6>
+            I was unsure about starting therapy when I reached out to Felicity. Their personalized therapy plans, 24/7
+            support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to
+            manage my anxiety so well. My panic attacks are a thing of distant past now.</h6>
+        </div>
+        <div class="swiper-slide">
+          <p>Anveshika Shukla</p>
+          <span>Student</span><br>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <h6>
+            I was unsure about starting therapy when I reached out to Felicity. Their personalized therapy plans, 24/7
+            support & absolute flexibility in terms of choosing time or therapist got me to enrol. I have learnt to
+            manage my anxiety so well. My panic attacks are a thing of distant past now.</h6>s
+        </div>
+        <div class="swiper-slide">
+
+        </div>
+        <div class="swiper-slide">
+
+        </div>
+        <div class="swiper-slide">
+
+        </div>
+        <div class="swiper-slide">
+
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+ 
+  <div class="abcd"><div class="signing">
+    <div id="text"><p>Try  <span style="color:rgb(218, 131, 131); font-weight: bold;font-size: 35px;">CALMQUEST</span>  today.</p>
+    <p style="font-size: 13px;margin-top:-20px;">Embrace a path of assistance and well-being, steering away from unnecessary hardships. Opt for a journey where support and relief guide your way, leaving suffering behind.</p> </div>
+    <div class="btn-conteiner">
+      <a class="btn-content" href="{% url 'mediapp:register' %}">
+          <span class="btn-title">Sign Up </span>
+          <span class="icon-arrow">
+        <svg width="50px" height="27px" viewBox="0 0 66 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path id="arrow-icon-one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+            <path id="arrow-icon-two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+            <path id="arrow-icon-three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+          </g>
+        </svg>
+      </span>
+      </a>
+  </div>
+  </div> 
+  </div>
+<div class="footer">
+  <div class="abc1">
+  <p style="font-size: 30px; font-family:'Bebas Neue', cursive;letter-spacing: 1px;">CALMQUEST</p>
+  <p style="font-size: 17px;margin-top: -20px;color:rgb(218, 131, 131)">Your Mental Ally</p>
+  
+  <ul class="Contact">
+    <li><i class="fa fa-home"></i> &nbsp;&nbsp; Goel Institute Of Technology and Management,<br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Lucknow,Uttar pradesh,226017</li>
+    
+    <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+91-7292729389 , 9820482939</li>
+    <li><i class="fa fa-envelope"></i>
+    &nbsp;&nbsp;info@calmquest.com</li>
+      <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
+  </ul>
+  </div>
+  <div class="abc2">
+    <!-- <input type="text" class="email" placeholder="Enter Your E-mail"> -->
+    <span style="font-size: 25px;margin-top: -70px;margin-left: 60px;">Quick Links</span>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      
+      <li><a href="#">Services</a></li>
+      <li><a href="{% url 'mediapp:aboutus'%}">About Us</a></li>
+      <li><a href="{% url 'mediapp:new1'%}">Wellness Hub</a></li>
+      <li><a href="{% url 'mediapp:contactus'%}">Contact </a></li>
+    </ul>
+    <!--  -->
+  </div>
+  
+  <div class="abc3"><span style="font-size: 25px;margin-top: -80px;margin-left: 60px;">Newsletter</span>
+    <form method="post" action="#">
+      {% csrf_token %}
+   <input type="text" class="email" name="news" Placeholder="Enter Your Email" style="width:100%;border-radius: 50px;border:2px solid white;">
+    <button class="button-71" role="button"><p style="margin-top:-10px">Subscribe</p></button>
+   </form>
+  </div>
+  
+  <ul class="socials">
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+  </ul>
+
+
+</div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="position:relative;margin-top: -80px;">
+<defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+<script src="https://unpkg.com/scrollreveal">
+  </script>
+  <script>
+    ScrollReveal().reveal('.quote', { distance: '50px', origin: 'left',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.navbar  ', { distance: '50px', origin: 'top',delay:200, duration: 1000 }); 
+    ScrollReveal().reveal('.disorders  p', { distance: '50px', origin: 'top', duration: 1000 }); 
+    ScrollReveal().reveal('.articles  ', { distance: '50px', origin: 'left',delay:500 ,duration: 2000 }); 
+    ScrollReveal().reveal('.AIdetail h3,.button ', { distance: '50px', origin: 'right',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.test  ', { distance: '50px', origin: 'bottom',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.testimonials  ', { distance: '50px', origin: 'top',delay:400 ,duration: 3000 }); 
+    // ScrollReveal().reveal('.footer', { distance: '50px', origin: 'bottom',delay:600, duration: 1000 }); 
+    ScrollReveal().reveal('.abcd', { distance: '50px', origin: 'left', duration: 1000 }); 
+    
+    
+  </script>  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: false,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>

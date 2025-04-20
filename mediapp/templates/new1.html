@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="{% static 'css/style.css'%}"/>
+ <!-----<link href="new 1.css" rel="stylesheet" type="text/css"/>--->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+ crossorigin="anonymous"></script>
+ <style>
+  /* Font stuff */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+/* Colour stuff */
+:root {
+  --white: #ffffff;
+  --lightBG: #dce1df;
+  --salmon: #ff6666;
+
+  --teal: #0096a0;
+  --tealMid: #0ebac7;
+  --tealContrast: #33ffff;
+  --tealShade: #007c85;
+
+  --darkGrey: #4f585e;
+}
+
+body {
+  background: var(--white);
+  color: var(--darkGrey);
+  font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a.btn {
+  background: var(--teal);
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.1s 0s ease-out;
+}
+
+.no-touch a.btn:hover {
+  background: lighten(var(--teal), 2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(var(--teal), 2.5);
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  transform: translate3d(0, 1px, 0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  margin: 80px auto;
+  align-items: center;
+  /* max-width: 960px; */
+ margin-top: 10px;
+  text-align: center;
+ 
+}
+
+div.card {
+  background: var(--white);
+  /* background:  #ffffff; */ 
+  display: inline-block;
+  margin: 30px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.card:has(:hover, :focus) {
+    cursor: pointer;
+    scale: 1.05;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+div.card img {
+  max-width: 300px;
+  object-fit:scale-down;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
+.card__image-holder {
+  background:white;
+  height: 0;
+  padding-bottom: 77%;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card .card-title {
+  background: var(--white);
+  padding: 6px 15px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+div.card .card-title a.toggle-info {
+  border-radius: 32px;
+  height: 32px;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 32px;
+}
+
+div.card .card-title a.toggle-info span {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 16px;
+  transition: all 0.15s 0s ease-out;
+  width: 12px;
+}
+
+div.card .card-title a.toggle-info span.left {
+  right: 14px;
+  transform: rotate(45deg);
+}
+
+div.card .card-title a.toggle-info span.right {
+  left: 14px;
+  transform: rotate(-45deg);
+}
+
+div.card .card-title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+  padding: 0;
+}
+
+div.card .card-title h2 small {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+div.card .card-description {
+  padding: 0 15px 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+div.card .card-actions {
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+  padding: 10px 15px 20px;
+  text-align: center;
+}
+
+div.card .card-flap {
+  background: darken(var(--white), 15);
+  position: absolute;
+  width: 100%;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+div.card .flap1 {
+  transition: all 0.3s 0.3s ease-out;
+  z-index: -1;
+}
+
+div.card .flap2 {
+  transition: all 0.3s 0s ease-out;
+  z-index: -2;
+}
+
+div.cards.showing div.card {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.88);
+}
+
+.no-touch div.cards.showing div.card:hover {
+  opacity: 0.94;
+  transform: scale(0.92);
+}
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+div.card.show .card-title a.toggle-info {
+  background: var(--salmon) !important;
+}
+
+div.card.show .card-title a.toggle-info span {
+  top: 15px;
+}
+
+div.card.show .card-title a.toggle-info span.left {
+  right: 10px;
+}
+
+div.card.show .card-title a.toggle-info span.right {
+  left: 10px;
+}
+
+div.card.show .card-flap {
+  background: var(--white);
+  transform: rotateX(0deg);
+  margin-top: -10px;
+}
+
+div.card.show .flap1 {
+  transition: all 0.3s 0s ease-out;
+}
+
+div.card.show .flap2 {
+  transition: all 0.3s 0.2s ease-out;
+}
+#nav {
+    /* margin-top: -5px; */
+    height: 85px;
+}
+
+#logo {
+    height: 65px;
+    border-radius: 30px 5px 60px 7px;
+    box-shadow: 10px 10px 5px rgba(196, 192, 192, 0.952);
+}
+
+ul {
+    font-size: 17px;
+    margin-right: 15px;
+    /* font-weight: 600; */
+
+}
+
+ul li .nav-link {
+    color: rgba(78, 76, 76, 0.74);
+    font-family: 'poppins';
+}
+
+ul li .nav-link:hover {
+
+    color: lightcoral;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+}
+
+ul li #login {
+    color: rgb(230, 154, 154);
+    border: 2px solid rgb(230, 154, 154);
+    width: 120px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+ul li #login:hover {
+    background-color: rgb(231, 179, 179);
+    color: white;
+    /* font-size: 18px; */
+    font-weight: bold;
+}
+
+.disorders {
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    padding-top: 30px;
+    width: 100%;
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    font-family: 'Poppins';
+    /* border-top:2px solid rgb(218, 131, 131); */
+    /* border-radius: 50% 70% 0 0 ; */
+    /* font-weight: bold; */
+    /* background-color: #fce4e2; */
+}
+
+.disorders p {
+    font-size: 20px;
+    color: rgba(78, 76, 76, 0.966);
+    font-weight: normal;
+    margin-top: 25px;
+    padding: 0 10px 10px;
+  }
+  .footer {
+    height: 400px;
+    background-color: rgba(78, 76, 76, 0.952);
+    color: white;
+    font-size: 30px;
+    padding: 140px;
+    padding-top:60px;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.abc1{
+    width:35%;
+    border-right: 3px solid white;
+}
+.abc2{
+    width:30%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:30px;
+    margin-top: 40px;
+    
+}
+.abc3{
+    width:30%;
+    margin-top: -5px;
+    border-left: 3px solid white;
+}
+.Contact {
+    list-style: none;
+    margin-left: -30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    /* margin: 1rem 0 3rem 0; */
+}
+.Contact .fa{
+    font-size: 20px;
+    margin-top: 10px;
+}
+/*  */
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1rem 0 3rem 0; */
+    margin-left:347px;
+    margin-top: 20px;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+   
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 30px;
+    transition: color .4s ease;
+    text-align: center;
+}
+.socials a:hover {
+    background-color:rgba(69, 153, 153, 0.925);
+    color: white;
+}
+.menu {
+    list-style: none;
+    font-size: 15px;
+    /* display:flex;  */
+    /* margin-top: -40px; */
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    /* border: 2px solid white; */
+    padding: 10px;
+    width:900px;
+    margin-left: -175px;
+    
+    /* border-radius: 50px; */
+}
+.email{
+    height:40px;
+    font-size: 15px;
+    padding: 15px;
+    
+    margin-left: 60px;
+    background-color: rgba(87, 85, 85, 0.952);
+}
+
+
+/* CSS */
+.button-71 {
+  background-color: rgba(69, 153, 153, 0.925);
+  border: 0;
+  height:40px;
+  width:100%;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'poppins';
+  font-size: 17px;
+  /* font-weight: 600; */
+  outline: 0;
+  padding-top: -30px;
+  padding: 16px 21px;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 60px;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+.waves {
+    position:absolute;
+    width: 100%;
+    height: 20vh;
+    min-height: 70px;
+    max-height: 80px;
+    margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+.para p{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: -70px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(78, 76, 76, 0.952);
+    padding-bottom: 20px;
+}
+ </style>
+ 
+</head>
+<body>
+  <nav class="navbar  navbar-light " id="nav">
+    <div class="container-fluid" style="background:transparent">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg'%}" id="logo"></a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'mediapp:index'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'mediapp:aboutus'%}">About Us</a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mediapp:services'%}">Services </a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="#">Wellness Hub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mediapp:contactus'%}">Contact us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mediapp:login'%}" id="login">Login</a>
+            </li>
+            <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+        </ul>
+    </div>
+</nav>
+<div class="disorders">
+  <span style="width:250px;background-color: rgba(69, 153, 153, 0.925);padding: 3px 20px;border-radius: 50px;box-shadow: 0px 6px 10px rgb(230, 154, 154);">Library</span>
+  <p> Learning about various mental disorders is a journey of empathy, breaking down stigma, and fostering a world
+    where understanding and support prevail.<br>
+
+  </p><br>
+</div>
+ <div class="cards">
+
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/self.jpg'%}" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Self Care
+            
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          Self-care is the ability of individuals, families and communities to promote health, prevent disease, 
+          maintain health, and cope with illness and disability with or without the support of a health worker.
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="#" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/depress1.jpg'%}"  />
+      </div>
+      <div class="card-title">
+        <a href="{% url 'mediapp:newdep'%}" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Depression
+            
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          Depression is a common but serious mood disorder. It causes severe symptoms that affect how a 
+          person feels, thinks, and handles daily activities, such as sleeping, eating, or working.
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href=# class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/therapy.jpg'%}" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Therapy
+          
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          Therapy is the act of caring for someone, or the method of caring.
+           If you have a rare disease, your doctor's therapy will hopefully cure you.        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="#" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/anxiety.jpg' %}"  />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Anxiety
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          Anxiety is a feeling of fear, dread, and uneasiness. It might cause you to sweat, feel restless and tense,
+           and have a rapid heartbeat. It can be a normal reaction to stress.
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="#" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/ship.jpg' %}"  />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Relationships
+        
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          A relationship is the way two or more people are connected, or the way they behave toward each other.
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="#" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="{% static 'images/mental.jpg' %}" style="width: 100%;height: 225px;" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+            Mental Wellness
+            
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          A state of well-being in which the individual realizes his or her own abilities, can cope with the normal
+           stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her 
+           community.
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="#" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    </div>
+  
+  </div>
+  <div class="footer">
+    <div class="abc1">
+    <p style="font-size: 30px; font-family:'Bebas Neue', cursive;letter-spacing: 1px;">CALMQUEST</p>
+    <p style="font-size: 17px;margin-top: -20px;color:rgb(218, 131, 131)">Your Mental Ally</p>
+    
+    <ul class="Contact">
+      <li><i class="fa fa-home"></i> &nbsp;&nbsp; Goel Institute Of Technology and Management,<br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Lucknow,Uttar pradesh,226017</li>
+      
+      <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+91-7292729389 , 9820482939</li>
+      <li><i class="fa fa-envelope"></i>
+      &nbsp;&nbsp;info@calmquest.com</li>
+        <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
+    </ul>
+    </div>
+    <div class="abc2">
+      <!-- <input type="text" class="email" placeholder="Enter Your E-mail"> -->
+      <span style="font-size: 25px;margin-top: -70px;margin-left: 60px;">Quick Links</span>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'mediapp:aboutus'%}">About Us</a></li>
+        <li><a href="{% url 'mediapp:new1'%}">Wellness Hub</a></li>
+        <li><a href="{% url 'mediapp:contactus'%}">Contact </a></li>
+      </ul>
+      <!--  -->
+    </div>
+    
+    <div class="abc3"><span style="font-size: 25px;margin-top: -80px;margin-left: 60px;">Newsletter</span>
+      <form method="post" action="#">
+        {% csrf_token %}
+     <input type="text" class="email" name="news" Placeholder="Enter Your Email" style="width:100%;border-radius: 50px;border:2px solid white;">
+      <button class="button-71" role="button"><p style="margin-top:-10px">Subscribe</p></button>
+     </form>
+    </div>
+    
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+  
+  
+  </div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="position:relative;margin-top: -80px;">
+  <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+  </svg>
+  
+  
+  
+  
+  
+    <script src="https://unpkg.com/scrollreveal">
+    </script>
+    <script>
+      ScrollReveal().reveal('.quote', { distance: '50px', origin: 'left',delay:400, duration: 1000 }); 
+      ScrollReveal().reveal('.navbar  ', { distance: '50px', origin: 'top',delay:200, duration: 1000 }); 
+      ScrollReveal().reveal('.disorders  p', { distance: '50px', origin: 'top', duration: 1000 }); 
+      ScrollReveal().reveal('.articles  ', { distance: '50px', origin: 'left',delay:500 ,duration: 2000 }); 
+      ScrollReveal().reveal('.AIdetail h3,.button ', { distance: '50px', origin: 'right',delay:400, duration: 1000 }); 
+      ScrollReveal().reveal('.test  ', { distance: '50px', origin: 'bottom',delay:400, duration: 1000 }); 
+      ScrollReveal().reveal('.testimonials  ', { distance: '50px', origin: 'top',delay:400 ,duration: 3000 }); 
+      // ScrollReveal().reveal('.footer', { distance: '50px', origin: 'bottom',delay:600, duration: 1000 }); 
+      ScrollReveal().reveal('.abcd', { distance: '50px', origin: 'left', duration: 1000 }); 
+      
+      
+    </script>
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 3,
+        coverflowEffect: {
+          rotate: 60,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+</body>
+</html>

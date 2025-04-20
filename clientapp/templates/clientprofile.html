@@ -1,0 +1,52 @@
+{% extends "clientparent.html" %}
+{% load static %}
+{% block body %}
+<div class="row">
+  <div class="col-sm-12">
+    <div class="profile" style="width: 75%;border: 1px solid black;margin-top: 3%;margin-left: 12%;border-radius: 20px;box-shadow: 5px 5px 10px black;">
+      <img src="{% static 'images/user.jpg'%}" style="height: 150px;width: 150px;margin-left: 5%;margin-top: 1%;"/>
+      <cite style="color: black;font-size: 40px;margin-left: 5%;">Hello vk</cite>
+    </div> 
+    <a href="{% url 'clientapp:changepassword'%}">
+      <button type="button" class="btn btn-warning btn-lg" style="margin-left:65%; margin-top:2%;border-radius: 30px;font-size: 16px;">Change Password</button>
+    </a>
+      <div class="info" style="border: 1px solid transparent;">
+      <p style="color:black;text-align: center;font-size: 30px;margin-top: 3%;font-weight: 300;">Personal Information</p>
+      <hr style="width: 10%;height: 3px;color: rgb(247, 2, 2);margin-left:45%;"/>
+<div class="form-group">
+       <table  style="border: 1px solid transparent;color:black;width: 55%;margin-left: 24%;">
+        <tr>
+        <td style="font-size: 20px;">Name</td>
+         </tr>
+         <tr>
+         <td><input type="text" placeholder="vk" style="width: 100%;height: 35px;border-radius: 50px;background-color: skyblue;border: 2px solid darkblue;" class="form-control"/></td>
+         </tr>
+        
+         <tr>
+         <td style="font-size: 20px;">Email</td>
+        </tr>
+        <tr>
+        <td><input type="text" placeholder="vk123@gmail.com" style="width: 100%;height: 35px;border-radius: 50px;background-color: skyblue;border: 2px solid darkblue;" class="form-control" readonly/></td>
+        </tr>
+        <tr>
+        <td style="font-size: 20px;">Contact Number</td>
+      </tr>
+      <tr>
+      <td><input type="tel" placeholder="23456789" style="width: 100%;height: 35px;border-radius: 50px;background-color: skyblue;border: 2px solid darkblue;" class="form-control"/></td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px;">DOB</td>
+      </tr>
+      <tr>
+      <td><input type="date" placeholder="06/06/2024" style="width: 100%;height: 35px;border-radius: 50px;background-color: skyblue;border: 2px solid darkblue;" class="form-control"/></td>
+      </tr>
+       </table>
+      </div>
+       
+       </div>
+      </div>
+</div>
+{% endblock body %}
+
+
+

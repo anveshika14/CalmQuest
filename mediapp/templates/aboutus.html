@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/aboutus.css'%}" rel="stylesheet">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Mental Health Care</title>
+<style>
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.navbar ul{
+    font-size: 17px;
+}
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    font-family: "poppins";
+    color: lightcoral;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight:bold;
+}
+.abc{
+    width:70%;
+}
+.content {
+    padding: 20px;
+    margin-top: 30px;
+    color: rgb(65, 63, 63);
+    font-size: 15px;
+}
+
+h2{
+    text-decoration: underline rgba(212, 122, 122, 0.904);
+    color: rgba(0, 0, 0, 0.836);
+    text-align: center;
+}
+/* Columns */
+.column {
+    width: 100%;
+    float: left;
+    
+}
+.part{
+    width: 50%;
+}
+
+.image{
+ background:url("/static/images/pic3.jpg");
+ height:500px;
+ width:auto;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-top: 30px;
+ display: flex;
+ border: 1px solid rgba(69, 153, 153, 0.925);
+ 
+}
+.content li{
+    font-size: 15px;
+}
+.text{
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    padding:140px 30px 0 120px;
+    font-size: 15px;
+    color: rgba(78, 76, 76, 0.966);
+}
+.footer {
+    height: 400px;
+    background-color: rgba(78, 76, 76, 0.952);
+    color: white;
+    font-size: 30px;
+    padding: 140px;
+    padding-top:60px;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.abc1{
+    width:35%;
+    border-right: 3px solid white;
+}
+.abc2{
+    width:30%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:30px;
+    margin-top: 40px;
+    
+}
+.abc3{
+    width:30%;
+    margin-top: -5px;
+    border-left: 3px solid white;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1rem 0 3rem 0; */
+    margin-left:347px;
+    margin-top: 20px;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+   
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 30px;
+    transition: color .4s ease;
+    text-align: center;
+}
+.socials a:hover {
+    background-color:rgba(69, 153, 153, 0.925);
+    color: white;
+}
+.menu {
+    list-style: none;
+    font-size: 15px;
+    /* display:flex;  */
+    /* margin-top: -40px; */
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    /* border: 2px solid white; */
+    padding: 10px;
+    width:900px;
+    margin-left: -175px;
+    
+    /* border-radius: 50px; */
+}
+.email{
+    height:40px;
+    font-size: 15px;
+    padding: 15px;
+    
+    margin-left: 60px;
+    background-color: rgba(87, 85, 85, 0.952);
+}
+
+
+/* CSS */
+.button-71 {
+  background-color: rgba(69, 153, 153, 0.925);
+  border: 0;
+  height:40px;
+  width:100%;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'poppins';
+  font-size: 17px;
+  /* font-weight: 600; */
+  outline: 0;
+  padding-top: -30px;
+  padding: 16px 21px;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 60px;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}
+/* @media screen and (max-width: 768px) {
+    .text {
+        width: 30%;
+    }
+} */
+</style>
+</head>
+<body>
+    <div>
+        <nav class="navbar  navbar-light " id="nav">
+            <div class="container-fluid" style="background:transparent">
+                <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg'%}" id="logo"></a>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'mediapp:index'%}">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:services'%}">Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:new1'%}">Wellness Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:contactus'%}">Contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'mediapp:login' %}" id="login">Login</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+<!-- <div class="header">
+    <p>About Us</p>
+</div> -->
+
+<div class="container">
+    <div class="image"><div class="abc"></div><div class="text"><h1 style="color:rgb(47, 114, 114)">About Us</h1><p>Welcome to calmQuest, your trusted companion on the journey to mental well-being. We are dedicated to leveraging the power of artificial intelligence to revolutionize mental health care, offering a comprehensive platform designed to foster awareness, education, and support for individuals struggling with mental health challenges.</p>
+    </div></div>
+    <div class="content">
+        <h2 >Our Mission</h2>
+        <p>At CALMQUEST, our mission is to break down barriers to mental health care and empower individuals to take control of their mental well-being. Through innovative technology, compassionate support, and evidence-based resources, we strive to make mental health care accessible, affordable, and effective for everyone..We are committed to utilizing advanced artificial intelligence technology to transform the landscape of mental health care. Our mission is to provide accessible, personalized, and effective support to individuals navigating mental health challenges.</p>
+    </div>
+    <div class="column"><h2>What We Offer</h2>
+        <div class="content"style="display: flex;flex-wrap: nowrap;" >
+            
+            <div class="part" >
+            <ul>
+                <li><strong>Awareness and Education:</strong> Access a wealth of resources, including articles, blogs, and curated book recommendations, to gain insights into various mental health conditions and coping strategies.</li>
+                <li><strong>Community Support:</strong> We recognize the importance of peer support in mental health recovery. That's why we offer a supportive community where individuals can connect, share experiences, and offer encouragement in a safe and judgment-free environment.</li>
+                
+            </ul>
+            </div>
+            <div class="part">
+                <ul>
+                    <li><strong>Online Counselling:</strong> We believe that seeking support should be convenient and comfortable. Our platform connects you with licensed therapists and counselors who specialize in various areas of mental health. Through secure video sessions, you can receive personalized guidance, support, and therapeutic interventions tailored to your unique needs.</li>
+                    <li><strong>AI-Powered Insights:</strong> Our AI technology provides personalized recommendations and insights based on user interactions within the platform.</li>
+                    
+                </ul>
+                </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="content">
+            <h2>Our Values</h2>
+            <div class="value">
+                <ul>
+                    <li><strong>Compassion:</strong> We approach every interaction with empathy, understanding, and respect for the unique experiences and challenges faced by each individual.</li>
+                    <li><strong>Innovation: </strong> We are committed to leveraging cutting-edge technology and evidence-based practices to continuously improve and expand our services, ensuring that our users receive the highest quality of care.</li>
+                    <li><strong>Accessibility:</strong> We believe that everyone deserves access to mental health care. That's why we strive to remove barriers to access by offering flexible scheduling, affordable pricing options, and a user-friendly platform that can be accessed anytime, anywhere.</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="content" style="border: 1px solid rgb(47, 114, 114);margin-top: 50px; margin-bottom: 80px;border-radius: 100px;background-color: #fce4e2;">
+            <i><h1 style="text-align: center;color:rgb(47, 114, 114)">"Get Started Today"</h1></i>
+            <p>Embark on your journey to mental well-being with <i><strong>CALMQUEST</strong></i>. Whether you're seeking information, support, or counseling, we're here to help you every step of the way. Join our community today and take the first step towards a happier, healthier life.Connect with licensed therapists and counselors through secure video sessions, receiving personalized guidance and support tailored to your unique needs.</p>
+        </div>
+    </div>
+</div>
+<div class="footer" style="margin-top: 1%;">
+    <div class="abc1">
+        <p style="font-size: 30px; font-family:'Bebas Neue', cursive;letter-spacing: 1px;">CALMQUEST</p>
+        <p style="font-size: 17px;margin-top: -20px;color:rgb(218, 131, 131)">Your Mental Ally</p>
+
+        <ul class="Contact">
+            <li><i class="fa fa-home"></i> &nbsp;&nbsp; Goel Institute Of Technology and Management,<br>
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Lucknow,Uttar pradesh,226017</li>
+
+            <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+91-7292729389 , 9820482939</li>
+            <li><i class="fa fa-envelope"></i>
+                &nbsp;&nbsp;info@calmquest.com</li>
+            <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
+        </ul>
+    </div>
+    <div class="abc2">
+        <!-- <input type="text" class="email" placeholder="Enter Your E-mail"> -->
+        <span style="font-size: 25px;margin-top: -70px;margin-left: 60px;">Quick Links</span>
+        <ul class="menu">
+            <li><a href="{% url 'mediapp:index'%}">Home</a></li>
+
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="{% url 'mediapp:new1'%}">Wellness Hub</a></li>
+            <li><a href="{% url 'mediapp:contactus'%}">Contact </a></li>
+        </ul>
+        <!--  -->
+    </div>
+    <div class="abc3"><span style="font-size: 25px;margin-top: -80px;margin-left: 60px;">Newsletter</span>
+        <input type="text" class="email" Placeholder="Enter Your Email"
+            style="width:100%;border-radius: 50px;border:2px solid white;">
+        <button class="button-71" role="button">
+            <p style="margin-top:-10px">Subscribe</p>
+        </button>
+    </div>
+
+    <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+
+
+</div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="position:relative;margin-top: -80px;">
+<defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+<script src="https://unpkg.com/scrollreveal">
+  </script>
+  <script>
+    ScrollReveal().reveal('.quote', { distance: '50px', origin: 'left',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.navbar  ', { distance: '50px', origin: 'top',delay:200, duration: 1000 }); 
+    ScrollReveal().reveal('.disorders  p', { distance: '50px', origin: 'top', duration: 1000 }); 
+    ScrollReveal().reveal('.articles  ', { distance: '50px', origin: 'left',delay:500 ,duration: 2000 }); 
+    ScrollReveal().reveal('.AIdetail h3,.button ', { distance: '50px', origin: 'right',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.test  ', { distance: '50px', origin: 'bottom',delay:400, duration: 1000 }); 
+    ScrollReveal().reveal('.testimonials  ', { distance: '50px', origin: 'top',delay:400 ,duration: 3000 }); 
+    // ScrollReveal().reveal('.footer', { distance: '50px', origin: 'bottom',delay:600, duration: 1000 }); 
+    ScrollReveal().reveal('.abcd', { distance: '50px', origin: 'left', duration: 1000 }); 
+    
+    
+  </script>
+  
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: false,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  </body>
+</html>

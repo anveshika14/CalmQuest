@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <title> ClamQuest| Book Your Session</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{% static '/assets/css/style1.css'%}">
+  <link href="{% static 'css/style.css'%}" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <style>
+
+.row{
+        border: transparent;
+        width: 100%;
+        height: 500px;
+        margin-left: 0.2%;
+    }
+    .col-sm-4{
+        height: 450px;
+       border: transparent;
+      margin-top: 2%;
+      display: flex;
+        flex-wrap: wrap;
+        float: left;
+    }
+    .box
+  {
+    height: 400px;
+    width: 100%;
+    border: transparent;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    margin-top: 6%;
+  }
+  
+  
+      .col-sm-5{
+        border: transparent;
+        height: 40%;
+      }
+      .col-sm-7{
+        border: transparent;
+        height: 40%;
+      }
+      .col-sm-5{
+         border: transparent;
+         border-radius: 50%;
+         margin-top: 10%;
+         height: 150px;
+         width: 150px;
+         margin-left: -5%;
+         float:left;
+         background-image: url("/static/images/user.jpg");
+         background-size: cover;
+      }
+      span{
+        font-size: 12px;
+       margin-top: 15%;
+       padding: 10px;
+        
+      }
+      .spec{
+        height: 200px;
+        width: 100%;
+        border: transparent;
+        padding: 10px;
+        margin-top: 40%;
+        font-size: 10px;
+      }
+     .spec p{
+      font-size: 13px;
+     }
+  </style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check"/>
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <img src="{% static 'images/logo.jpg'%}"/>
+    </label>
+    <ul>
+      <li><a href="#">How its works</a></li>
+      <li><a href="#">Plans & pricing</a></li>
+      <li><a href="#" style="color: rgb(230, 154, 154)">Our Counselors</a></li>
+      <li><a href="#">Wellness Hub</a></li>
+      <li><a href="#">Corporates</a></li>
+      <li><a href="{% url 'clientapp:clienthome'%}"><button type="submit" class="btn" style="font-size: 18px;margin-top: -2%;border-radius: 50px;height: 50px;width: 160px; background-color:rgb(230, 154, 154);color: white;">My Dashboard</button></a></li>
+    </ul>
+  </nav>
+  <div class="hero-image">
+    <img src="{% static 'images/aa.jpg'%}">
+    <div class="hero-text">
+      <h1 style="font-size:40px">We have the best professionals-licensed and verified,who can help you heal!</h1>
+      <p>Not sure have to choose a counselling therapist?</p>
+      <button style="background-color: rgb(251, 195, 195);">Get a Recommendation</button>
+    </div>
+  </div>
+
+  <div class="fliter">
+    <h1>Fliter</h1>
+    <input type="date" placeholder="Available Date" >
+      <select>
+      <option value="">Select  a  slot</option>
+      <option value="Option 1">7AM-11AM</option>
+      <option value="Option 2">11AM-3PM</option>
+      <option value="Option 3">3PM-7PM</option>
+      <option value="Option 4">7PM-11PM</option>
+      <option value="Option 5">11PM-3AM</option>
+      <option value="Option 5">3AM-7AM</option>
+    </select>  
+    <select>
+      <option value="">Specialization</option>
+      <option value="Option 1">Not sure</option>
+      <option value="Option 2">Anxiety</option>
+      <option value="Option 3">Relationship issue</option>
+      <option value="Option 4">Depression</option>
+      <option value="Option 5">Stress</option>
+    </select> 
+    <input type="text" placeholder="search..." style="width: 300px;height: 40px;margin-left: 10%;"/> 
+    <br/>
+    <select   style="margin-left: 11%;margin-top: 1%;margin-bottom: 4%;">
+      <option value="">Language</option>
+      <option value="opt1">Abkhar</option>
+      <option value="opt2">Afar</option>
+      <option value="opt3">Afrikaans</option>
+      <option value="opt4">Akan</option>
+      <option value="opt5">Albanian</option>
+      <option value="opt6">Amharic</option>
+      <option value="opt7">Arabic</option>
+      <option value="opt8">Aragonese</option>
+      <option value="opt9">Armenian</option>
+      <option value="opt10">Assamese</option>
+       <option value="opt11">Avaric</option>
+      <option value="opt12">Avestan</option>
+      <option value="opt13">Aymara</option>
+       <option value="opt14">Azerbaijani</option>
+      <option value="opt15">Bambara</option>
+      <option value="opt16">Bashkir</option> 
+      <option value="opt17">Basque</option>
+      <option value="opt18">Belarusian</option>
+      <option value="opt19">Bengali</option>
+      <option value="opt20">Bihari</option> 
+      <option value="opt21">Bislama</option>
+      <option value="opt22">Bosnian</option>
+      <option value="opt23">Breton</option>
+       <option value="opt24">Bulgarian</option>
+       <option value="opt25">Burmese</option>
+       <option value="opt26">Catalan</option>
+       <option value="opt27">Chichewa</option>
+        <option value="opt28">Chamorro</option>
+       <option value="opt29">Chechen</option>
+       <option value="opt30">Chewa</option> 
+       <option value="opt31">Chinese</option>
+       <option value="opt32">Chuvash</option>
+       <option value="opt33">Cornish</option>
+       <option value="opt34">Corsican</option>
+       <option value="opt35">Cree</option>
+       <option value="opt36">Croatian</option>
+       <option value="opt37">Czech</option>
+       <option value="opt38">Danish</option>
+       <option value="opt39">Divehi</option>
+       <option value="opt40">Dogri</option>
+       <option value="opt41">Dutch</option>
+       <option value="opt42">Englisg</option>
+       <option value="opt43">Esperanto</option>
+       <option value="opt44">Estonian</option>
+       <option value="opt45">Ewe</option>
+       <option value="opt46">Faroese</option>
+       <option value="opt47">Fijian</option>
+       <option value="opt">Maldivian</option>
+       <option value="opt">Nyanja</option>
+       <option value="opt27">Valencian</option>
+ </select>  
+</div>
+
+<!--------------blog--------------->
+<div class="row">
+  <div class="col-sm-4">
+    <div class="box">
+  <div class="col-sm-5">
+         
+  </div>
+<div class="col-sm-7">
+ <h2 style="margin-top: 30%;">Komal Chaurasiya</h2>
+ <span>MA in Psychiatric Social Work</span>
+</div>
+<div class="spec">
+<h3>Specialization : </h3>
+<P>Anxiety, Stress, Depression, OCD, Relationship Issues ,
+   Adolescent Issues, Grief & Loss, Sleep Issues, Trauma, ADHD (Adult),
+    Autism Spectrum Disorders, Phobia, Child Counseling, Family Therapy.</P>
+    <h3>Now Available At : </h3>
+    <p>July 1 2024 10:00AM</p>
+    <button type="button" class="btn" style="height: 40px;width: 200px;background-color: rgba(69,153,153,0.925);color: white;border-radius: 30px;margin-left: 40%;box-shadow: 3px 3px 5px black;margin-top: -5%;font-size: 14px;">Schedule a Session</button>
+
+</div>
+
+  </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="box">
+      <div class="col-sm-5">
+             
+      </div>
+    <div class="col-sm-7">
+     <h2 style="margin-top: 30%;">Komal Chaurasiya</h2>
+     <span>MA in Clinical Psychology</span>
+    </div>
+    <div class="spec">
+    <h3>Specialization : </h3>
+    <P>Stress, Anxiety, Depression, Relationship Issues, Couple Counseling , Sexual Issues, Grief & Loss, 
+      Psychosis, Sleep Issues, Family Therapy, Body Image, Self Confidence, Anger.</P>
+        <h3>Now Available At : </h3>
+        <p>July 10 2024 01:00PM</p>
+        <button type="button" class="btn" style="height: 40px;width: 200px;background-color: rgba(69,153,153,0.925);color: white;border-radius: 30px;margin-left: 40%;box-shadow: 3px 3px 5px black;font-size: 14px;">Schedule a Session</button>
+
+    </div>
+    
+      </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="box">
+      <div class="col-sm-5">
+         
+      </div>
+    <div class="col-sm-7">
+     <h2 style="margin-top: 30%;">Komal Chaurasiya</h2>
+     <span>M.Phil in Psychology</span>
+    </div>
+    <div class="spec">
+    <h3>Specialization : </h3>
+    <P>Anxiety, Stress, Depression, Relationship Issues, Couple Counseling , Sexual Issues,
+       Suicidal Ideation, Grief & Loss, OCD, Bipolar Disorder, Sleep Issues, 
+       Cognitive Rehabilitation, Trauma, ADHD (Adult), Autism Spectrum Disorders, 
+       Self-harm, Body Image, Self Confidence.</P>
+        <h3>Now Available At : </h3>
+        <p>July 1 2024 04:00PM</p>
+        <button type="button" class="btn " style="color: white;height: 40px;width: 200px;background-color: rgba(69,153,153,0.925);border-radius: 30px;margin-left: 40%;box-shadow: 3px 3px 5px black;margin-top: -7%;font-size: 14px;">Schedule a Session</button>
+
+    </div>
+    
+      </div>
+  </div>
+ </div>
+  
+<!------------footer------------->
+<div class="footer" style="margin-top: 2%;">
+  <div class="abc1">
+      <p style="font-size: 30px; font-family:'Bebas Neue', cursive;letter-spacing: 1px;">CALMQUEST</p>
+      <p style="font-size: 17px;margin-top: -20px;color:rgb(218, 131, 131)">Your Mental Ally</p>
+
+      <ul class="Contact">
+          <li><i class="fa fa-home"></i> &nbsp;&nbsp; Goel Institute Of Technology and Management,<br>
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Lucknow,Uttar pradesh,226017</li>
+
+          <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+91-7292729389 , 9820482939</li>
+          <li><i class="fa fa-envelope"></i>
+              &nbsp;&nbsp;info@calmquest.com</li>
+          <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
+      </ul>
+  </div>
+  <div class="abc2">
+      <!-- <input type="text" class="email" placeholder="Enter Your E-mail"> -->
+      <span style="font-size: 25px;margin-top: -70px;margin-left: 60px;">Quick Links</span>
+      <ul class="menu">
+          <li><a href="{% url 'mediapp:index'%}">Home</a></li>
+
+          <li><a href="#">Services</a></li>
+          <li><a href="{% url 'mediapp:aboutus'}">About Us</a></li>
+          <li><a href="{% url 'mediapp:new1'%}">Wellness Hub</a></li>
+          <li><a href="{% url 'mediapp:contactus'%}">Contact </a></li>
+      </ul>
+      <!--  -->
+  </div>
+  <div class="abc3"><span style="font-size: 25px;margin-top: -80px;margin-left: 60px;">Newsletter</span>
+      <input type="text" class="email" Placeholder="Enter Your Email"
+          style="width:100%;border-radius: 50px;border:2px solid white;">
+      <button class="button-71" role="button">
+          <p style="margin-top:-10px">Subscribe</p>
+      </button>
+  </div>
+<!--------------------------
+  <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+  </ul>
+-------------------->
+
+</div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" style="position:relative;margin-top: -80px;">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="#FCBECD" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="#F8CBD6" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="#F9E1E7" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+ScrollReveal().reveal('.quote', { distance: '50px', origin: 'left',delay:400, duration: 1000 }); 
+ScrollReveal().reveal('.navbar  ', { distance: '50px', origin: 'top',delay:200, duration: 1000 }); 
+ScrollReveal().reveal('.disorders  p', { distance: '50px', origin: 'top', duration: 1000 }); 
+ScrollReveal().reveal('.articles  ', { distance: '50px', origin: 'left',delay:500 ,duration: 2000 }); 
+ScrollReveal().reveal('.AIdetail h3,.button ', { distance: '50px', origin: 'right',delay:400, duration: 1000 }); 
+ScrollReveal().reveal('.test  ', { distance: '50px', origin: 'bottom',delay:400, duration: 1000 }); 
+ScrollReveal().reveal('.testimonials  ', { distance: '50px', origin: 'top',delay:400 ,duration: 3000 }); 
+// ScrollReveal().reveal('.footer', { distance: '50px', origin: 'bottom',delay:600, duration: 1000 }); 
+ScrollReveal().reveal('.abcd', { distance: '50px', origin: 'left', duration: 1000 }); 
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+effect: "coverflow",
+grabCursor: true,
+centeredSlides: false,
+slidesPerView: 3,
+coverflowEffect: {
+  rotate: 60,
+  stretch: 0,
+  depth: 100,
+  modifier: 1,
+  slideShadows: false,
+},
+pagination: {
+  el: ".swiper-pagination",
+},
+});
+</script>
+</body>
+</html>
+  </body>
+  </html>

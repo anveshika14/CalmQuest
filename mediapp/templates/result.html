@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         Report
+      </title>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+   </head>
+   <body >
+      <div class="card " style="height: 60%;width: 40%;border: 1px solid black;margin: auto;margin-top: 10%;box-shadow: 5px 5px 5px black;">
+         {% csrf_token %}
+         <h1 class="text-center fs-4" style="margin-left: 35%;font-family: 'poppins';">Level  : {{level}}</h1>
+         <hr>
+         {% if level == 1 %}
+         <div class="row border " style="min-height:20px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 bordered " style="background-color: green;min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 bordered " style=" min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 bordered" style="min-height:20px;">Level 3</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 4</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 5</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 6</div>
+          </div>
+         {% elif level == 2 %}   
+         <div class="row border " style="min-height:20px; max-width: 100px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 bordered " style="background-color: green; min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 bordered " style="background-color: rgb(2, 181, 2); min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 3</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 4</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 5</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 6</div>
+          </div>
+          {% elif level == 3 %}   
+          <div class="row border " style="min-height:20px; max-width: 50px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 border " style="background-color: green; min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 border " style="background-color: rgb(2, 181, 2); min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 border" style="min-height:20px; background-color: rgb(176, 194, 14);">Level 3</div>
+             <div class="col-sm-2 border" style="min-height:20px; ">Level 4</div>
+             <div class="col-sm-2 border" style="min-height:20px; ">Level 5</div>
+             <div class="col-sm-2 border" style="min-height:20px; ">Level 6</div>
+          </div>
+          {% elif level == 4 %}   
+          <div class="row border " style="min-height:20px; max-width: 50px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 bordered " style="background-color: green; min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 bordered " style="background-color: rgb(2, 181, 2); min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(176, 194, 14);">Level 3</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(255, 187, 0);">Level 4</div>
+             <div class="col-sm-2 bordered" style="min-height:20px;">Level 5</div>
+             <div class="col-sm-2 bordered" style="min-height:20px;">Level 6</div>
+          </div>
+          {% elif level == 5 %} 
+          <div class="row border " style="min-height:20px; max-width: 50px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 bordered " style="background-color: green; min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 bordered " style="background-color: rgb(2, 181, 2); min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(176, 194, 14);">Level 3</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(255, 187, 0);">Level 4</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(255, 115, 0);">Level 5</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; ">Level 6</div>
+          </div>
+          {% elif level == 6 %}   
+         <div class="row border " style="min-height:20px; max-width: 50px; border: 2px solid black;margin-left: 40%;">
+             <div class="col-sm-2 bordered " style="background-color: green; min-height: 20px;">Level 1</div>
+             <div class="col-sm-2 bordered " style="background-color: rgb(2, 181, 2); min-height: 20px;">Level 2</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(176, 194, 14);">Level 3</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(255, 187, 0);">Level 4</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: rgb(255, 115, 0);">Level 5</div>
+             <div class="col-sm-2 bordered" style="min-height:20px; background-color: red;">Level 6</div>
+          </div>
+         {% endif %}
+         <h1 class="text-center fs-3" style="margin-left: 20%;font-family: 'poppins';">
+             Result : {{msg}}
+         </h1>
+       
+     
+         <a href="{% url 'clientapp:session1'%}"><button style="background-color: rgb(230, 154, 154); border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            margin-left: 30%;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+         margin-bottom: 10px;
+         padding-bottom: 10px;
+            border-radius: 5px;">Get a Recommendation</button></a>
+     
+        </div>
+   </body>
+</html>
+
+
+
