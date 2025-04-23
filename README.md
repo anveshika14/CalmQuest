@@ -14,4 +14,5 @@ UI Tools: Bootstrap
 This project was built to merge technology and compassion by providing accessible tools for mental wellness. It also served as a hands-on learning experience in full-stack development.
 
 <h4>Screenshot :</h4>
-![WhatsApp Image 2025-04-23 at 22 04 39_3c906914](https://github.com/user-attachments/assets/f8001127-227d-4284-b555-ec7579344c63)
+
+![WhatsApp Image 2025-04-23 at 22 04 39_3c906914](https://github.com/user-attachments/assets/02db7680-ddd0-4619-b74a-e12bc8f3cbfd)
