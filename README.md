@@ -1,5 +1,6 @@
 <h1>CalmQuest-Your Mental Ally</h1>
 <p>CalmQuest is a web-based application focused on promoting mental health and emotional well-being. It offers users tools like guided meditation, mood tracking, anonymous journaling, and curated wellness resources in a clean and responsive interface.</p>
+
 <h3>🔧 Tech Stack</h3>
 Frontend: HTML, CSS, JavaScript
 
