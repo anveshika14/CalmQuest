@@ -9,6 +9,7 @@ Backend: Python (Django)
 Database: SQLite
 
 UI Tools: Bootstrap
+
 <h3>📌 Purpose</h3>
 This project was built to merge technology and compassion by providing accessible tools for mental wellness. It also served as a hands-on learning experience in full-stack development.
 
